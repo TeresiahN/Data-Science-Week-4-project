@@ -1,0 +1,31 @@
+import pandas as pd
+
+# Load the dataset
+data = pd.read_csv('https://www.kaggle.com/datasets/mbaabuharun/craigslist-vehicles.csv')
+
+# Fill missing values with median for numerical columns
+data = data.fillna(data.median())
+
+# Fill missing values with mode for categorical columns
+data = data.apply(lambda x: x.fillna(x.value_counts().index[0]))
+
+# Check for any remaining missing values
+print(data.isnull().sum())
+
+# Convert 'posting_date' column to datetime data type
+data['posting_date'] = pd.to_datetime(data['posting_date'])
+# Set 'posting_date' as the index
+data.set_index('posting_date', inplace=True)
+# Explore data using visualizations and statistical analysis
+# For example, you can use libraries like matplotlib and seaborn for visualizations
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Example visualization: Price distribution over time
+plt.figure(figsize=(12, 6))
+sns.lineplot(x=data.index, y=data['price'])
+plt.title('Price Distribution Over Time')
+plt.xlabel('Posting Date')
+plt.ylabel('Price')
+plt.show()
+
