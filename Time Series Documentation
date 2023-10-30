@@ -1,0 +1,40 @@
+Data Procesing
+Addressing Missing Values
+Numerical columns: Filled missing values with the median of respective columns.
+Categorical columns: Filled missing values with mode of respective columns.
+
+Correcting Data Types
+Converted the 'posting_date' column to datetime data type for time-based analysis.
+
+Datetime Index Creation
+Set 'posting_date' as the index of the dataset for time series analysis.
+
+Explanatory Data Analysis
+Exploring Temporal Patterns
+Visualization:Utilized line plots to analyze the price distribution over time, providing insights into the trend of vehicle prices.
+
+Analyzing Demand Supply Dynamics
+Region and vehicle type analysis: Performed explanatory analysis to understand how prices vary based on region and vehicle type, identifying potential demand-supply patterns.
+
+Identifying Seasonal trends
+Seasonal Patterns: Investigated recurring patterns in vehicle prices, identifying any seasonal trends based on months or specific time intervals.
+
+Time Series Chart
+Building the Time Series Chart:
+Constructed a time series chart using the processed data, depicting the variation in vehicle prices over time.
+
+Observations and Insights:
+Temporal Patterns
+Identified trends and fluctuations in vehicle prices over the observed period. Analyzed if certain months or seasons influence prices differently.
+
+Demand Supply Dynamics
+Explored how prices are influenced by different regions and types of vehicles. Investigated if certain regions have consistent price variations compared to others.
+
+Seasonal Trends
+Examined any repeating patterns or cycles in vehicle prices, helping to predict future trends.
+
+Conclusion
+Summarize the key findings from the analysis, highlighting significant observations about temporal patterns, demand-supply dynamics, and seasonal trends in vehicle prices.
+
+Recommendation
+Suggest potential use cases or strategies based on the insights gained from the analysis. For instance, recommendations could be made to buyers, sellers, or policymakers in the automotive industry
